@@ -1,5 +1,4 @@
-#include <iostream>
-#include<vector>
+#include<iostream>
 using namespace std;
 
 struct Node {
@@ -37,7 +36,7 @@ void TernaryTree::insert_h(int value, Node *leaf) {
             leaf->left->data = value;
             leaf->left->left = nullptr;
             leaf->left->right = nullptr;
-            leaf->middle->middle = nullptr;
+            leaf->left->middle = nullptr;
         }
     }
     else if (value == leaf -> data){
@@ -46,8 +45,8 @@ void TernaryTree::insert_h(int value, Node *leaf) {
         else {
             leaf ->middle = new Node;
             leaf ->middle->data = value;
-            leaf->left->left = nullptr;
-            leaf->left->right = nullptr;
+            leaf->middle->left = nullptr;
+            leaf->middle->right = nullptr;
             leaf->middle->middle = nullptr;
         }
 
@@ -60,7 +59,7 @@ void TernaryTree::insert_h(int value, Node *leaf) {
             leaf->right->data = value;
             leaf->right->left = nullptr;
             leaf->right->right= nullptr;
-            leaf->middle->middle = nullptr;
+            leaf->right->middle = nullptr;
         }
     }
 }
